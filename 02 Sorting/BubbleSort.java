@@ -36,12 +36,12 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {4, 6, 2, 5, 7, 9, 1, 3};
+        int[] arr = { 4, 6, 2, 5, 7, 9, 1, 3 };
         int n = arr.length;
 
+        // bubbleSort(arr, n);
         recursiveBubbleSort(arr, n);
 
-        System.out.println("Sorted array is:");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }

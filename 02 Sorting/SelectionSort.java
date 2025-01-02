@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class SelectionSort {
     public static void selectionSort(int[] arr, int n) {
         for (int i = 0; i < n - 1; i++) {
@@ -24,7 +22,6 @@ public class SelectionSort {
 
         selectionSort(arr, n);
 
-        System.out.println("Sorted array is:");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }

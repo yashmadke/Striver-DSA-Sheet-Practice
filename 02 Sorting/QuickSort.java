@@ -27,17 +27,12 @@ class Solution {
         return j;
     }
 
-    static void qs(int[] arr, int low, int high) {
+    static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
             int pIndex = partition(arr, low, high);
-            qs(arr, low, pIndex - 1);
-            qs(arr, pIndex + 1, high);
+            quickSort(arr, low, pIndex - 1);
+            quickSort(arr, pIndex + 1, high);
         }
-    }
-
-    public static int[] quickSort(int[] arr) {
-        qs(arr, 0, arr.length - 1);
-        return arr;
     }
 }
 
@@ -46,15 +41,8 @@ public class QuickSort {
         int[] arr = { 4, 6, 2, 5, 7, 9, 1, 3 };
         int n = arr.length;
 
-        System.out.println("Before quick sort:");
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
+        Solution.quickSort(arr, 0, n - 1);
 
-        arr = Solution.quickSort(arr);
-
-        System.out.println("After quick sort:");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }

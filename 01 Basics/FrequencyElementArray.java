@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FrequencyElementArray {
-    public static void countFreq(int arr[], int n) {
+    public static void countFreq1(int arr[], int n) {
         boolean visited[] = new boolean[n];
 
         for (int i = 0; i < n; i++) {
@@ -22,7 +22,7 @@ public class FrequencyElementArray {
         }
     }
 
-    public static void Frequency(int arr[], int n) {
+    public static void countFreq2(int arr[], int n) {
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < n; i++) {
@@ -42,7 +42,8 @@ public class FrequencyElementArray {
     public static void main(String[] args) {
         int arr[] = { 10, 5, 10, 15, 10, 5 };
         int n = arr.length;
-        // countFreq(arr, n);
-        Frequency(arr, n);
+
+        // countFreq1(arr, n);
+        countFreq2(arr, n);
     }
 }

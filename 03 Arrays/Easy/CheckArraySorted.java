@@ -1,5 +1,17 @@
 public class CheckArraySorted {
-    public static boolean checkSorted(int[] arr) {
+    public static boolean brute(int[] arr, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[i]) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean optimal(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] < arr[i - 1]) {
                 return false;
@@ -10,8 +22,10 @@ public class CheckArraySorted {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = { 1, 2, 3, 4, 5 };
 
-        System.out.println(checkSorted(arr));
+        // System.out.println(brute(arr, arr.length));
+
+        System.out.println(optimal(arr));
     }
 }
